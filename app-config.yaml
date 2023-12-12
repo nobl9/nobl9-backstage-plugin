@@ -1,0 +1,56 @@
+app:
+  title: Nobl9 Backstage Example App
+  baseUrl: http://localhost:3000
+
+organization:
+  name: Nobl9
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+  csp:
+    connect-src: ["'self'", 'http:', 'https:']
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  database:
+    client: pg
+    connection:
+      host: ${POSTGRES_HOST}
+      port: ${POSTGRES_PORT}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+
+techdocs:
+  builder: 'local'
+  generator:
+    runIn: 'docker'
+  publisher:
+    type: 'local'
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, API, Resource, Location]
+  locations:
+    - type: file
+      target: ../../examples/entities.yaml
+    - type: file
+      target: ../../examples/template/template.yaml
+      rules:
+        - allow: [Template]
+
+    - type: file
+      target: ../../examples/org.yaml
+      rules:
+        - allow: [User, Group]
+
+nobl9:
+  baseUrl: https://app.nobl9.com
+  organization: ${NOBL9_ORGANIZATION_ID}
+  clientId: ${NOBL9_CLIENT_ID}
+  clientSecret: ${NOBL9_CLIENT_SECRET}

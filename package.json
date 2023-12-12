@@ -1,0 +1,52 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "plugins/*"
+    ]
+  },
+  "scripts": {
+    "start": "backstage-cli repo start",
+    "build": "backstage-cli repo build --all",
+    "lint": "backstage-cli repo lint",
+    "test": "backstage-cli test --watchAll=false",
+    "clean": "backstage-cli repo clean",
+    "tsc": "tsc",
+    "ci": "tsc && backstage-cli repo build --all && backstage-cli test --watchAll=false && backstage-cli repo lint && prettier --check .",
+    "version:minor": "npx lerna version minor",
+    "version:major": "npx lerna version major",
+    "version:patch": "npx lerna version patch"
+  },
+  "dependencies": {
+    "@backstage/core-components": "^0.13.8",
+    "@backstage/core-plugin-api": "^1.8.0",
+    "@backstage/theme": "^0.4.4",
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "4.0.0-alpha.61",
+    "react-use": "^17.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1 || ^17.0.0"
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.24.0",
+    "@backstage/core-app-api": "^1.11.1",
+    "@backstage/dev-utils": "^1.0.24",
+    "@backstage/test-utils": "^1.4.5",
+    "@spotify/prettier-config": "15.0.0",
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/node": "*",
+    "lerna": "^8.0.0",
+    "msw": "^1.0.0",
+    "prettier": "3.1.1"
+  },
+  "prettier": "@spotify/prettier-config",
+  "files": [
+    "dist"
+  ]
+}
