@@ -3,7 +3,7 @@
 This plugin is one of two [Backstage](https://backstage.io) plugins to support [Nobl9](https://nobl9.com) SLOs in your Backstage installation.
 It allows you to easily access the most up-to-date metrics for any SLO within Backstage, such as the Burn Rate, Remaining Error Budget, labels, etc.
 
-![Nobl9 SLOs tab](/docs/images/backstage-ui-plugin.png 'Nobl9 SLOs tab')
+![Nobl9 SLOs tab](https://github.com/nobl9/nobl9-backstage-plugin/blob/main/docs/images/backstage-ui-plugin.png 'Nobl9 SLOs tab')
 
 ## Installation guide
 
