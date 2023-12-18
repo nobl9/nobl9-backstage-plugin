@@ -9,7 +9,7 @@ The repository contains the following Backstage plugins:
 - Nobl9 Backend plugin - acts as a proxy between UI and Nobl9 SLO Status API
 - Nobl9 UI plugin - displays SLO statuses for annotated entities
 
-You'll need both of plugin to integrate with Nobl9 successfully.
+You'll need both plugins to integrate with Nobl9 successfully.
 
 ## Feature overview
 
