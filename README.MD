@@ -157,6 +157,18 @@ nobl9:
 
 Depending on where your Nobl9 organization is hosted, use either `https://app.nobl9.com` or `http://us1.nobl9.com` as the base URL.
 
+The backend plugin will be available under the `/api/nobl9/slos` path by default. You can use the `nobl9.backendPluginPath` config key to provide a custom path.
+If, for example, your backend plugins are served without the `/api` prefix, you can use the following config:
+
+```yaml
+nobl9:
+  baseUrl: https://app.nobl9.com
+  organization: ${NOBL9_ORGANIZATION_ID}
+  clientId: ${NOBL9_CLIENT_ID}
+  clientSecret: ${NOBL9_CLIENT_SECRET}
+  backendPluginPath: /nobl9/slos
+```
+
 #### Catalog entity annotations
 
 Annotate components of your choice with `nobl9.com/project` annotation and either `nobl9.com/services` and/or `nobl9.com/slos`. Based on multiple annotations, the `AND` operator is used to decide which SLOs to display.
