@@ -14,5 +14,10 @@ export interface Config {
      * @visibility frontend
      */
     organization: string;
+    /**
+     * custom backend plugin path
+     * @visibility frontend
+     */
+    backendPluginPath: string | undefined;
   };
 }

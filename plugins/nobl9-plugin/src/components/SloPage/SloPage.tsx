@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import { Progress, ResponseErrorPanel } from '@backstage/core-components';
 import { Entity } from '@backstage/catalog-model';
+import { Config } from '@backstage/config';
 import { useApi, configApiRef } from '@backstage/core-plugin-api';
 import { useEntity } from '@backstage/plugin-catalog-react';
 import { SloGridItem } from '../SloGrid';
@@ -58,6 +59,14 @@ const toQueryStringParams = (entity: Entity) => {
   return params.toString();
 };
 
+const getBackendUrl = (config: Config, entity: Entity) => {
+  const baseUrl = config.getString('backend.baseUrl');
+  const path = config.has('nobl9.backendPluginPath')
+    ? config.getString('nobl9.backendPluginPath')
+    : '/api/nobl9/slos';
+  return `${baseUrl}${path}?${toQueryStringParams(entity)}`;
+};
+
 export const SloPage = () => {
   const { entity } = useEntity();
   const config = useApi(configApiRef);
@@ -65,11 +74,7 @@ export const SloPage = () => {
 
   const { value, loading, error } =
     useAsync(async (): Promise<N9BackendResponse> => {
-      return await fetch(
-        `${config.getString(
-          'backend.baseUrl',
-        )}/api/nobl9/slos?${toQueryStringParams(entity)}`,
-      ).then(res => res.json());
+      return await fetch(getBackendUrl(config, entity)).then(res => res.json());
     }, [entity]);
 
   if (loading) {
