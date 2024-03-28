@@ -8,7 +8,7 @@ import { CompositeIcon, SloIcon } from '../Icons';
 import { SloObjective } from './SloObjective';
 import { Slo } from '../../types';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   sloHeaderContainer: {
     marginBottom: 20,
   },
@@ -31,12 +31,12 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   objectivesCount: {
-    color: '#767676',
+    color: theme.palette.type === 'dark' ? '#BABBBB' : '#767676',
     fontSize: 12,
     marginRight: 8,
   },
   detailsButton: {
-    color: '#2E77D0',
+    color: theme.palette.type === 'dark' ? '#00819E' : '#2E77D0',
     fontWeight: 600,
     letterSpacing: 1,
     fontSize: 12,
@@ -44,7 +44,11 @@ const useStyles = makeStyles({
   objectivesContainer: {
     marginBottom: 16,
   },
-});
+  labelChip: {
+    color: theme.palette.type === 'dark' ? '#181818' : undefined,
+    backgroundColor: theme.palette.type === 'dark' ? '#BABBBB' : undefined,
+  },
+}));
 
 type SloGridItemProps = {
   slo: Slo;
@@ -107,6 +111,7 @@ export const SloGridItem = ({
                         size="small"
                         style={{ margin: 0 }}
                         icon={<LabelIcon style={{ color: '#BE7E7E ' }} />}
+                        className={classes.labelChip}
                       />
                     </Grid>
                   )),

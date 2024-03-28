@@ -8,7 +8,7 @@ import { Composite, Objective } from '../../types';
 import { SloObjectiveDetails } from './SloObjectiveDetails';
 import { SloObjectiveNoData } from './SloObjectiveNoData';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   objectiveContainer: {
     minWidth: 400,
     marginRight: 16,
@@ -27,7 +27,13 @@ const useStyles = makeStyles({
     color: '#fff',
     backgroundColor: '#0081BA',
   },
-});
+  target: {
+    fontSize: 12,
+    marginTop: 6,
+    fontWeight: 500,
+    color: theme.palette.type === 'dark' ? '#BABBBB' : '#616161',
+  },
+}));
 
 type SloObjectiveProps = {
   objective: Objective | Composite;
@@ -65,14 +71,7 @@ export const SloObjective = ({ objective, composite }: SloObjectiveProps) => {
               </span>
             </div>
             <div>
-              <Typography
-                style={{
-                  fontSize: 12,
-                  marginTop: 6,
-                  fontWeight: 500,
-                  color: '#616161',
-                }}
-              >
+              <Typography className={classes.target}>
                 Target: {Number.parseFloat((objective.target * 100).toFixed(5))}
                 %
               </Typography>

@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import { Composite, Objective } from '../../types';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   value: {
-    color: '#383838',
+    color: theme.palette.type === 'dark' ? '#fff' : '#383838',
     fontSize: 24,
     fontWeight: 700,
     marginBottom: 6,
@@ -14,11 +14,11 @@ const useStyles = makeStyles({
     textOverflow: 'ellipsis',
   },
   label: {
-    color: '#767676',
+    color: theme.palette.type === 'dark' ? '#BABBBB' : '#767676',
     fontSize: 12,
     fontWeight: 400,
   },
-});
+}));
 
 type SloObjectiveDetailsProps = {
   objective: Objective | Composite;

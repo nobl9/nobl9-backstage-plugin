@@ -14,7 +14,7 @@ import {
 } from '../constants';
 import { N9BackendResponse } from '../../types';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   headerContainer: {
     marginBottom: 34,
   },
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     fontSize: 24,
   },
   subHeader: {
-    color: '#616161',
+    color: theme.palette.type === 'dark' ? '#BABBBB' : '#616161',
     fontSize: 14,
     fontWeight: 500,
   },
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     fontWeight: 600,
     marginBottom: 8,
   },
-});
+}));
 
 const toQueryStringParams = (entity: Entity) => {
   const project = entity.metadata.annotations?.[ANNOTATION_NOBL9_PROJECT];
