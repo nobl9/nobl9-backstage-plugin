@@ -5,7 +5,11 @@ import { Grid, Typography } from '@material-ui/core';
 import { Progress, ResponseErrorPanel } from '@backstage/core-components';
 import { Entity } from '@backstage/catalog-model';
 import { Config } from '@backstage/config';
-import { useApi, configApiRef } from '@backstage/core-plugin-api';
+import {
+  useApi,
+  configApiRef,
+  identityApiRef,
+} from '@backstage/core-plugin-api';
 import { useEntity } from '@backstage/plugin-catalog-react';
 import { SloGridItem } from '../SloGrid';
 import {
@@ -70,11 +74,15 @@ const getBackendUrl = (config: Config, entity: Entity) => {
 export const SloPage = () => {
   const { entity } = useEntity();
   const config = useApi(configApiRef);
+  const identityApi = useApi(identityApiRef);
   const classes = useStyles();
 
   const { value, loading, error } =
     useAsync(async (): Promise<N9BackendResponse> => {
-      return await fetch(getBackendUrl(config, entity)).then(res => res.json());
+      const credentials = await identityApi.getCredentials();
+      return await fetch(getBackendUrl(config, entity), {
+        headers: { Authorization: `Bearer ${credentials.token}` },
+      }).then(res => res.json());
     }, [entity]);
 
   if (loading) {
