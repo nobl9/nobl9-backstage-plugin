@@ -3,10 +3,10 @@ import {
   PluginCacheManager,
   errorHandler,
 } from '@backstage/backend-common';
+import { LoggerService } from '@backstage/backend-plugin-api';
 import { Config } from '@backstage/config';
 import express from 'express';
 import Router from 'express-promise-router';
-import { Logger } from 'winston';
 import { groupBy } from './utils';
 
 const defaultTokenTTL = 55 * 60000;
@@ -20,7 +20,7 @@ export interface Nobl9Configuration {
 }
 
 export interface RouterOptions {
-  logger: Logger;
+  logger: LoggerService;
   cache: PluginCacheManager;
   config: Config;
 }
@@ -28,7 +28,7 @@ export interface RouterOptions {
 const getAccessToken = async (
   nobl9Config: Nobl9Configuration,
   cacheClient: CacheClient,
-  logger: Logger,
+  logger: LoggerService,
 ) => {
   const token = await cacheClient.get('accessToken');
   if (token) {
@@ -50,7 +50,6 @@ const getAccessToken = async (
   });
 
   if (!response.ok) {
-    logger.error(response);
     throw new Error(`accessToken couldn't not be fetched`);
   }
   const data = await response.json();
