@@ -1,6 +1,10 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+<<<<<<< HEAD
   "version": "0.2.1-alpha.0",
+=======
+  "version": "0.3.0-alpha.0",
+>>>>>>> 8d66ea4 (v0.3.0-alpha.0)
   "packages": [
     "plugins/*"
   ],
