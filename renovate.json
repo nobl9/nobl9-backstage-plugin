@@ -1,8 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "schedule:nonOfficeHours",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    "group:recommended",
+    "workarounds:all",
+    ":automergePr",
+    ":automergeRequireAllStatusChecks"
   ],
+  "reviewersFromCodeOwners": true,
+  "dependencyDashboard": true,
+  "semanticCommits": "disabled",
+  "labels": ["dependencies", "renovate"],
+  "prHourlyLimit": 1,
+  "prConcurrentLimit": 5,
+  "rebaseWhen": "conflicted",
+  "rangeStrategy": "pin",
+  "branchPrefix": "renovate_",
+  "commitMessagePrefix": "chore:",
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
