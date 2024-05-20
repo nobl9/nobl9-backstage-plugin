@@ -11,6 +11,9 @@ The repository contains the following Backstage plugins:
 
 You'll need both plugins to integrate with Nobl9 successfully.
 
+> [!IMPORTANT]
+> Starting from version v0.3.0, Nobl9 Backstage plugins support the new [Backstage Backend System](https://backstage.io/docs/backend-system/building-backends/index).
+
 ## Feature overview
 
 The plugin allows you to easily access the most up-to-date metrics for any SLO within Backstage, such as the Burn Rate, Remaining Error Budget, labels, etc.
@@ -67,36 +70,20 @@ Edit `packages/backend/src/index.ts` to register the backend plugin:
 
 ```diff
 diff --git a/packages/backend/src/index.ts b/packages/backend/src/index.ts
-index 04c4ff9..5774ae9 100644
+index 1c442a8..d3af2ba 100644
 --- a/packages/backend/src/index.ts
 +++ b/packages/backend/src/index.ts
-@@ -28,6 +28,7 @@ import scaffolder from './plugins/scaffolder';
- import proxy from './plugins/proxy';
- import techdocs from './plugins/techdocs';
- import search from './plugins/search';
-+import nobl9 from './plugins/nobl9';
- import { PluginEnvironment } from './types';
- import { ServerPermissionClient } from '@backstage/plugin-permission-node';
- import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
-@@ -85,6 +86,7 @@ async function main() {
-   const techdocsEnv = useHotMemoize(module, () => createEnv('techdocs'));
-   const searchEnv = useHotMemoize(module, () => createEnv('search'));
-   const appEnv = useHotMemoize(module, () => createEnv('app'));
-+  const nobl9Env = useHotMemoize(module, () => createEnv('nobl9'));
+@@ -38,4 +38,7 @@ backend.add(import('@backstage/plugin-search-backend/alpha'));
+ backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
+ backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
 
-   const apiRouter = Router();
-   apiRouter.use('/catalog', await catalog(catalogEnv));
-@@ -93,6 +95,7 @@ async function main() {
-   apiRouter.use('/techdocs', await techdocs(techdocsEnv));
-   apiRouter.use('/proxy', await proxy(proxyEnv));
-   apiRouter.use('/search', await search(searchEnv));
-+  apiRouter.use('/nobl9', await nobl9(nobl9Env));
-
-   // Add backends ABOVE this line; this 404 handler is the catch-all fallback
-   apiRouter.use(notFoundHandler());
++// nobl9 plugin
++backend.add(import('@nobl9/nobl9-backstage-backend-plugin'));
++
+ backend.start();
 ```
 
-You can now verify that the backend plugin is running correctly. Access the backend URL by sending a `GET` request to `<backstage app url>/api/nobl9/health`. If the plugin is running, you will receive a response with `{"status":"ok"}`.
+You can now verify that the backend plugin is running correctly. Access the backend URL by sending a `GET` request to `<backstage app url>/api/nobl9-backend/health`. If the plugin is running, you will receive a response with `{"status":"ok"}`.
 
 ### UI plugin installation
 
@@ -157,7 +144,7 @@ nobl9:
 
 Depending on where your Nobl9 organization is hosted, use either `https://app.nobl9.com` or `http://us1.nobl9.com` as the base URL.
 
-The backend plugin will be available under the `/api/nobl9/slos` path by default. You can use the `nobl9.backendPluginPath` config key to provide a custom path.
+The backend plugin will be available under the `/api/nobl9-backend/slos` path by default. You can use the `nobl9.backendPluginPath` config key to provide a custom path.
 If, for example, your backend plugins are served without the `/api` prefix, you can use the following config:
 
 ```yaml
@@ -166,7 +153,7 @@ nobl9:
   organization: ${NOBL9_ORGANIZATION_ID}
   clientId: ${NOBL9_CLIENT_ID}
   clientSecret: ${NOBL9_CLIENT_SECRET}
-  backendPluginPath: /nobl9/slos
+  backendPluginPath: /nobl9-backend/slos
 ```
 
 #### Catalog entity annotations

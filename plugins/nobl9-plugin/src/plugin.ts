@@ -23,4 +23,4 @@ export const Nobl9Page = nobl9Plugin.provide(
 );
 
 export const isNobl9Available = (entity: Entity) =>
-  entity?.metadata.annotations?.[ANNOTATION_NOBL9_PROJECT];
+  !!entity?.metadata.annotations?.[ANNOTATION_NOBL9_PROJECT];

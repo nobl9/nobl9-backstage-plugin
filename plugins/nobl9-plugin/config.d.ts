@@ -18,6 +18,6 @@ export interface Config {
      * custom backend plugin path
      * @visibility frontend
      */
-    backendPluginPath: string | undefined;
+    backendPluginPath?: string;
   };
 }
