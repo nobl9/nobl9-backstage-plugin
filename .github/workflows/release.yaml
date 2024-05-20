@@ -1,0 +1,32 @@
+name: release
+on: workflow_dispatch
+jobs:
+  publish:
+    name: Create release and publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: Ensure access to NPM registry
+        run: npm whoami
+        env:
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Config git user
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Bump versions and publish packages
+        run: |
+          npx lerna version --yes --conventional-commits --create-release github
+          npx lerna publish --yes from-package
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_TOKEN }}
