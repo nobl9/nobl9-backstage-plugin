@@ -24,14 +24,14 @@ jobs:
 
       - name: Config git user
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
+          git config --global user.name "n9-machine-user"
+          git config --global user.email "n9-machine-user@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.N9_MACHINE_USER_BACKSTAGE_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
       - name: Bump versions and publish packages
         run: |
           npx lerna version --yes --conventional-commits --create-release github
           npx lerna publish --yes from-package
         env:
-          GH_TOKEN: ${{ secrets.PAT }}
+          GH_TOKEN: ${{ secrets.N9_MACHINE_USER_BACKSTAGE_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
