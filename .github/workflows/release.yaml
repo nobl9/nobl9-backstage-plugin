@@ -10,6 +10,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+          token: ${{ secrets.N9_MACHINE_USER_BACKSTAGE_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
