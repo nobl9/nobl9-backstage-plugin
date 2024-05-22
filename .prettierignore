@@ -8,3 +8,4 @@ dist-types
 app-config.yaml
 lerna.json
 renovate.json
+**/CHANGELOG.md
