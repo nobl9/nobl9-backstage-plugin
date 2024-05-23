@@ -2284,7 +2284,7 @@
   resolved "https://registry.yarnpkg.com/@backstage/backend-dev-utils/-/backend-dev-utils-0.1.4.tgz#65d204939c49b5df6a2148e8ad4dc718ccd1df07"
   integrity sha512-5YgAPz4CRtnqdaUlYCHwGmXvpkGQ1jaUMoDtiQ81WDxQrf+0iYZCwS4ftVyQmB0Ga6BaGOUf6GG/OuFA56Y5mA==
 
-"@backstage/backend-plugin-api@^0.6.17", "@backstage/backend-plugin-api@^0.6.7":
+"@backstage/backend-plugin-api@^0.6.17":
   version "0.6.17"
   resolved "https://registry.yarnpkg.com/@backstage/backend-plugin-api/-/backend-plugin-api-0.6.17.tgz#3d00b167cccb36e2341ae5cc4026352904938322"
   integrity sha512-eEYNM09SHlB3kjmcJSoVNK4D7HSBVbvv3ZCeSbRBeVRBOpW6ndw25iejT5CeAQE6N1NVTTaQ3g3UTIoXyIhahA==
