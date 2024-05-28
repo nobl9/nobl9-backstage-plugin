@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "0.26.6",
-    "@backstage/core-app-api": "1.12.4",
+    "@backstage/core-app-api": "1.12.5",
     "@backstage/dev-utils": "1.0.31",
     "@backstage/test-utils": "1.5.4",
     "@spotify/prettier-config": "15.0.0",
