@@ -2377,13 +2377,14 @@
     yauzl "^3.0.0"
     yn "^4.0.0"
 
-"@backstage/backend-defaults@0.2.17":
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/@backstage/backend-defaults/-/backend-defaults-0.2.17.tgz#cbb2b7e0ac2c9b340513e38d762f7bc2d06e0ce0"
-  integrity sha512-85AAiasLA4O9KmGt+0oNScwQk2hJBN2UBLFvig496LEaWUl6ViLXIr/29e2YrGDL9koVQtHybmitRO0zerKczA==
+"@backstage/backend-defaults@0.2.18":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-defaults/-/backend-defaults-0.2.18.tgz#07055241c38ae19431247dcf453d6e572a482bfd"
+  integrity sha512-85qX2tvTMWGlrujBXy3OX0XipVEH9Zv19V/1NPPFkwEPqCfA+D2X7VBWQFFtuQ5jtoYvZgR2u9XdrUCsQ7e3ng==
   dependencies:
-    "@backstage/backend-app-api" "^0.7.0"
-    "@backstage/backend-common" "^0.21.7"
+    "@backstage/backend-app-api" "^0.7.3"
+    "@backstage/backend-common" "^0.22.0"
+    "@backstage/plugin-events-node" "^0.3.4"
 
 "@backstage/backend-dev-utils@^0.1.4":
   version "0.1.4"
@@ -3286,6 +3287,13 @@
     react-use "^17.2.4"
     yaml "^2.0.0"
     zen-observable "^0.10.0"
+
+"@backstage/plugin-events-node@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-events-node/-/plugin-events-node-0.3.4.tgz#9d56b47edf9fc0d71f94b46ff91333fb10aad0f4"
+  integrity sha512-vALPBLIqlqAxGohbHat/z4qtvmUcC7+AyWUy+mn84O9OFB+L/v53m79qPjAJhUB9rzPZu8ClsVCfmhm/84j52Q==
+  dependencies:
+    "@backstage/backend-plugin-api" "^0.6.18"
 
 "@backstage/plugin-permission-common@^0.7.13":
   version "0.7.13"
