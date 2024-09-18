@@ -32,6 +32,7 @@ jobs:
       - name: Bump versions and publish packages
         run: |
           yarn install
+          yarn ci
           npx lerna version --yes --conventional-commits --create-release github
           npx lerna publish --yes from-package
         env:
