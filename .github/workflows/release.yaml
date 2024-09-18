@@ -33,7 +33,7 @@ jobs:
         run: |
           yarn install
           yarn ci
-          npx lerna version --yes --conventional-commits --create-release github
+          npx lerna version --yes --force-publish --conventional-commits --create-release github
           npx lerna publish --yes from-package
         env:
           GH_TOKEN: ${{ secrets.N9_MACHINE_USER_BACKSTAGE_TOKEN }}
