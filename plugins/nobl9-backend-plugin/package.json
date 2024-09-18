@@ -22,7 +22,11 @@
     "url": "https://github.com/nobl9/nobl9-backstage-plugin/issues"
   },
   "backstage": {
-    "role": "backend-plugin"
+    "role": "backend-plugin",
+    "pluginId": "nobl9-backend",
+    "pluginPackages": [
+      "@nobl9/nobl9-backstage-backend-plugin"
+    ]
   },
   "scripts": {
     "start": "backstage-cli package start",
