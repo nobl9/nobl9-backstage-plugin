@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@backstage/backend-common": "0.23.3",
-    "@backstage/backend-defaults": "0.4.1",
+    "@backstage/backend-defaults": "0.8.0",
     "@backstage/backend-plugin-api": "0.7.0",
     "@backstage/config": "1.2.0",
     "@types/express": "4.17.21",
