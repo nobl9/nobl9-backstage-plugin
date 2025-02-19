@@ -2,7 +2,6 @@ import {
   coreServices,
   createBackendPlugin,
 } from '@backstage/backend-plugin-api';
-import { cacheToPluginCacheManager } from '@backstage/backend-common';
 import { createRouter } from './service/router';
 
 /**
@@ -24,7 +23,7 @@ export const nobl9BackendPlugin = createBackendPlugin({
         httpRouter.use(
           await createRouter({
             logger,
-            cache: cacheToPluginCacheManager(cache),
+            cache,
             config,
           }),
         );

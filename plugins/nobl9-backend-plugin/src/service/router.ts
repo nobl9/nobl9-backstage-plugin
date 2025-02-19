@@ -1,12 +1,8 @@
-import {
-  CacheClient,
-  PluginCacheManager,
-  errorHandler,
-} from '@backstage/backend-common';
-import { LoggerService } from '@backstage/backend-plugin-api';
+import { CacheService, LoggerService } from '@backstage/backend-plugin-api';
 import { Config } from '@backstage/config';
 import express from 'express';
 import Router from 'express-promise-router';
+import { MiddlewareFactory } from '@backstage/backend-defaults/rootHttpRouter';
 import { groupBy } from './utils';
 
 const defaultTokenTTL = 55 * 60000;
@@ -21,16 +17,16 @@ export interface Nobl9Configuration {
 
 export interface RouterOptions {
   logger: LoggerService;
-  cache: PluginCacheManager;
+  cache: CacheService;
   config: Config;
 }
 
 const getAccessToken = async (
   nobl9Config: Nobl9Configuration,
-  cacheClient: CacheClient,
+  cache: CacheService,
   logger: LoggerService,
 ) => {
-  const token = await cacheClient.get('accessToken');
+  const token = await cache.get('accessToken');
   if (token) {
     logger.debug('found accessToken in cache');
     return token;
@@ -53,7 +49,7 @@ const getAccessToken = async (
     throw new Error(`accessToken couldn't not be fetched`);
   }
   const data = await response.json();
-  cacheClient.set('accessToken', data.access_token, { ttl: defaultTokenTTL });
+  cache.set('accessToken', data.access_token, { ttl: defaultTokenTTL });
   return data.access_token;
 };
 
@@ -109,7 +105,7 @@ export async function createRouter(
   router.get('/slos', async (req: any, response: any) => {
     const accessToken = await getAccessToken(
       nobl9Config,
-      cache.getClient(),
+      cache,
       logger,
     );
     const project = req.query.project;
@@ -136,6 +132,7 @@ export async function createRouter(
     response.json(groupBy(filteredData, (slo: any) => slo.service));
   });
 
-  router.use(errorHandler());
+  const middleware = MiddlewareFactory.create({ logger, config });
+  router.use(middleware.error());
   return router;
 }

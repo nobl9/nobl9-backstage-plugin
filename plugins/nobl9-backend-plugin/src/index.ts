@@ -1,2 +1,1 @@
-export * from './service/router';
-export { nobl9BackendPlugin as default } from './plugin';
+export { nobl9BackendPlugin as default } from './plugin.ts';

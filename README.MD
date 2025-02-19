@@ -48,24 +48,6 @@ Install the Nobl9 backend plugin package in your Backstage app by running the fo
 yarn workspace backend add @nobl9/nobl9-backstage-backend-plugin
 ```
 
-Create a file `packages/backend/src/plugins/nobl9.ts` with the following content:
-
-```ts
-import { createRouter } from '@nobl9/nobl9-backstage-backend-plugin';
-import { Router } from 'express';
-import { PluginEnvironment } from '../types';
-
-export default async function createPlugin(
-  env: PluginEnvironment,
-): Promise<Router> {
-  return await createRouter({
-    logger: env.logger,
-    cache: env.cache,
-    config: env.config,
-  });
-}
-```
-
 Edit `packages/backend/src/index.ts` to register the backend plugin:
 
 ```diff
