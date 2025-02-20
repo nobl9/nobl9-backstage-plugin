@@ -49,8 +49,13 @@
   "devDependencies": {
     "@backstage/cli": "^0.30.0",
     "@types/supertest": "6.0.2",
-    "msw": "2.3.5",
+    "msw": "2.7.0",
     "supertest": "7.0.0"
+  },
+  "resolutions": {
+    "jsonpath-plus": "10.3.0",
+    "elliptic": "6.6.1",
+    "koa": "2.15.4"
   },
   "files": [
     "dist"

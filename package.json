@@ -14,7 +14,7 @@
     "test": "backstage-cli test --watchAll=false",
     "clean": "backstage-cli repo clean",
     "tsc": "tsc",
-    "ci": "tsc && backstage-cli repo build --all && backstage-cli test --watchAll=false && backstage-cli repo lint && prettier --check .",
+    "ci": "tsc && backstage-cli repo build --all && backstage-cli repo test --watchAll=false && backstage-cli repo lint && prettier --check .",
     "version:minor": "npx lerna version minor",
     "version:major": "npx lerna version major",
     "version:patch": "npx lerna version patch"
@@ -41,9 +41,14 @@
     "@testing-library/react": "16.0.0",
     "@testing-library/user-event": "14.5.2",
     "@types/node": "20.14.15",
-    "lerna": "8.1.8",
-    "msw": "2.3.5",
+    "lerna": "8.2.0",
+    "msw": "2.7.0",
     "prettier": "3.3.3"
+  },
+  "resolutions": {
+    "jsonpath-plus": "10.3.0",
+    "elliptic": "6.6.1",
+    "koa": "2.15.4"
   },
   "prettier": "@spotify/prettier-config",
   "files": [

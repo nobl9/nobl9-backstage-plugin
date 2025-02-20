@@ -103,11 +103,7 @@ export async function createRouter(
   });
 
   router.get('/slos', async (req: any, response: any) => {
-    const accessToken = await getAccessToken(
-      nobl9Config,
-      cache,
-      logger,
-    );
+    const accessToken = await getAccessToken(nobl9Config, cache, logger);
     const project = req.query.project;
     const slos = req.query.slos?.split(',') || [];
     const services = req.query.services?.split(',') || [];
