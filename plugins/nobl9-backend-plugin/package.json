@@ -49,7 +49,7 @@
   "devDependencies": {
     "@backstage/cli": "^0.30.0",
     "@types/supertest": "6.0.2",
-    "msw": "2.7.0",
+    "msw": "2.7.1",
     "supertest": "7.0.0"
   },
   "resolutions": {
