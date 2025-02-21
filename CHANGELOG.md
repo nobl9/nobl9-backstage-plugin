@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/nobl9/nobl9-backstage-plugin/compare/v0.3.0...v0.3.1) (2025-02-21)
+
+**Note:** Version bump only for package root
+
+
+
+
+
 # [0.3.0](https://github.com/nobl9/nobl9-backstage-plugin/compare/v0.3.0-alpha.7...v0.3.0) (2024-09-19)
 
 **Note:** Version bump only for package root
