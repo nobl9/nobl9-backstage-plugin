@@ -48,7 +48,7 @@
   "resolutions": {
     "jsonpath-plus": "10.3.0",
     "elliptic": "6.6.1",
-    "koa": "2.15.4",
+    "koa": "2.16.1",
     "react-markdown": "10.0.0",
     "tar-fs": "2.1.2"
   },
