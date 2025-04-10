@@ -55,7 +55,7 @@
   "resolutions": {
     "jsonpath-plus": "10.3.0",
     "elliptic": "6.6.1",
-    "koa": "2.15.4",
+    "koa": "2.16.1",
     "tar-fs": "2.1.2"
   },
   "files": [
