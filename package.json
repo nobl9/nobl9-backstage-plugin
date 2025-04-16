@@ -41,7 +41,7 @@
     "@testing-library/react": "16.0.0",
     "@testing-library/user-event": "14.5.2",
     "@types/node": "20.14.15",
-    "lerna": "8.2.0",
+    "lerna": "8.2.2",
     "msw": "2.7.1",
     "prettier": "3.5.3"
   },
