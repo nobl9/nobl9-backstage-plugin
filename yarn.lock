@@ -2383,15 +2383,15 @@
     "@backstage/version-bridge" "^1.0.11"
     lodash "^4.17.21"
 
-"@backstage/core-components@0.17.0", "@backstage/core-components@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.17.0.tgz#8f17afdf7b758397362f64d7adb8ca3fcf31b70b"
-  integrity sha512-CUH+PWBjrDo6KpyXb1uUutA+tjjALc6lqlVDh6TuFiiEf9+mzgGzaEtiepARb+CqOHZDH2lfC7EZfLezNTRHHQ==
+"@backstage/core-components@0.17.3", "@backstage/core-components@^0.17.3":
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.17.3.tgz#e5e97ff0600a769b99be589683cba892b09383d6"
+  integrity sha512-3RFC7eauO8dQDuwYKmSbknNC+RbqBlDEViN7Bxxdm2rt5u2tprDAUNvkMds28fKqhcOhWv4MC+OEYef5+pc/lQ==
   dependencies:
     "@backstage/config" "^1.3.2"
-    "@backstage/core-plugin-api" "^1.10.5"
+    "@backstage/core-plugin-api" "^1.10.8"
     "@backstage/errors" "^1.2.7"
-    "@backstage/theme" "^0.6.4"
+    "@backstage/theme" "^0.6.6"
     "@backstage/version-bridge" "^1.0.11"
     "@dagrejs/dagre" "^1.1.4"
     "@date-io/core" "^1.3.13"
@@ -2427,15 +2427,15 @@
     zen-observable "^0.10.0"
     zod "^3.22.4"
 
-"@backstage/core-components@^0.17.3":
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.17.3.tgz#e5e97ff0600a769b99be589683cba892b09383d6"
-  integrity sha512-3RFC7eauO8dQDuwYKmSbknNC+RbqBlDEViN7Bxxdm2rt5u2tprDAUNvkMds28fKqhcOhWv4MC+OEYef5+pc/lQ==
+"@backstage/core-components@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.17.0.tgz#8f17afdf7b758397362f64d7adb8ca3fcf31b70b"
+  integrity sha512-CUH+PWBjrDo6KpyXb1uUutA+tjjALc6lqlVDh6TuFiiEf9+mzgGzaEtiepARb+CqOHZDH2lfC7EZfLezNTRHHQ==
   dependencies:
     "@backstage/config" "^1.3.2"
-    "@backstage/core-plugin-api" "^1.10.8"
+    "@backstage/core-plugin-api" "^1.10.5"
     "@backstage/errors" "^1.2.7"
-    "@backstage/theme" "^0.6.6"
+    "@backstage/theme" "^0.6.4"
     "@backstage/version-bridge" "^1.0.11"
     "@dagrejs/dagre" "^1.1.4"
     "@date-io/core" "^1.3.13"
