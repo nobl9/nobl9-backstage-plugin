@@ -19,5 +19,15 @@ export interface Config {
      * @visibility frontend
      */
     backendPluginPath?: string;
+    /**
+     * Client ID for the nobl9 API credentials
+     * @visibility backend
+     */
+    clientId: string;
+    /**
+     * Client Secret of the nobl9 API credentials
+     * @visibility secret
+     */
+    clientSecret: string;
   };
 }
