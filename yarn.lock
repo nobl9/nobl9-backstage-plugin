@@ -3175,7 +3175,7 @@
     i18next "^22.4.15"
     zen-observable "^0.10.0"
 
-"@backstage/theme@0.6.7":
+"@backstage/theme@0.6.7", "@backstage/theme@^0.6.7":
   version "0.6.7"
   resolved "https://registry.yarnpkg.com/@backstage/theme/-/theme-0.6.7.tgz#861add4ac04dd9324ee232494ee90e2ce9f2280c"
   integrity sha512-sXtX3btb/bCUZXB1Hduc5VPZZ9dB7X9ikYkVs0nXz9UrQTVg7hvobi+0dV/HxGs5kYGBlu/OpaPAJk5DtJ6SSQ==
@@ -3197,15 +3197,6 @@
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/@backstage/theme/-/theme-0.6.6.tgz#af00688a8ac5629fc9f2060fffaab8b8602e3018"
   integrity sha512-tRAHFcR2WEA7I0FFDEAVAjoCL6UzHo+wG9+M6GipQRdWVzPltI6n7mDTaWEEb57mn2kjt5YEt4A6zwv7JuUp5Q==
-  dependencies:
-    "@emotion/react" "^11.10.5"
-    "@emotion/styled" "^11.10.5"
-    "@mui/material" "^5.12.2"
-
-"@backstage/theme@^0.6.7":
-  version "0.6.7"
-  resolved "https://registry.yarnpkg.com/@backstage/theme/-/theme-0.6.7.tgz#861add4ac04dd9324ee232494ee90e2ce9f2280c"
-  integrity sha512-sXtX3btb/bCUZXB1Hduc5VPZZ9dB7X9ikYkVs0nXz9UrQTVg7hvobi+0dV/HxGs5kYGBlu/OpaPAJk5DtJ6SSQ==
   dependencies:
     "@emotion/react" "^11.10.5"
     "@emotion/styled" "^11.10.5"
@@ -6282,10 +6273,10 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@testing-library/user-event@14.5.2":
-  version "14.5.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.5.2.tgz#db7257d727c891905947bd1c1a99da20e03c2ebd"
-  integrity sha512-YAh82Wh4TIrxYLmfGcixwD18oIjyC1pFQC2Y01F2lzV2HTMiYrI0nze0FD0ocB//CKS/7jIUgae+adPqxK5yCQ==
+"@testing-library/user-event@14.6.1":
+  version "14.6.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.6.1.tgz#13e09a32d7a8b7060fe38304788ebf4197cd2149"
+  integrity sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==
 
 "@tootallnate/once@2":
   version "2.0.0"
