@@ -71,7 +71,7 @@
     "on-headers": "1.1.0",
     "tmp": "0.2.4",
     "mdast-util-to-hast": "13.2.1",
-    "qs": "6.14.1",
+    "qs": "6.14.2",
     "tar": "7.5.7"
   },
   "prettier": "@spotify/prettier-config",
