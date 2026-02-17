@@ -1711,7 +1711,25 @@
     "@backstage/types" "^1.2.2"
     ms "^2.1.3"
 
-"@backstage/core-app-api@1.16.0", "@backstage/core-app-api@^1.16.0":
+"@backstage/core-app-api@1.19.5":
+  version "1.19.5"
+  resolved "https://registry.yarnpkg.com/@backstage/core-app-api/-/core-app-api-1.19.5.tgz#a05055667796e29f13c6d583e3e127db93b69709"
+  integrity sha512-KZdJzsBxM6wcOZf6CfdwA3bldgbTqCIQ/hiYT4FGhN/lO+qjPrXfIKAYnAUY06w13vlTi+SYmQekbDTmFjCLGw==
+  dependencies:
+    "@backstage/config" "^1.3.6"
+    "@backstage/core-plugin-api" "^1.12.3"
+    "@backstage/types" "^1.2.2"
+    "@backstage/version-bridge" "^1.0.12"
+    "@types/prop-types" "^15.7.3"
+    history "^5.0.0"
+    i18next "^22.4.15"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
+    react-use "^17.2.4"
+    zen-observable "^0.10.0"
+    zod "^3.25.76"
+
+"@backstage/core-app-api@^1.16.0":
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/@backstage/core-app-api/-/core-app-api-1.16.0.tgz#328c43ea2de6d25815aa872160c7a95522b88b81"
   integrity sha512-0mQJaRWDyLUg61/iIp5afNwDY2PL7DNuOcArjLbRl+V2qV4wEiq+JIJlDQJSfknITqQCSth1XHdw3xX2qi8+Ug==
@@ -1934,6 +1952,19 @@
     "@backstage/version-bridge" "^1.0.11"
     history "^5.0.0"
 
+"@backstage/core-plugin-api@^1.12.3":
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/@backstage/core-plugin-api/-/core-plugin-api-1.12.3.tgz#c3697a32db3267c411cf5a2059fe3f833adf6810"
+  integrity sha512-PhnPEc5qVF+2g0/2k9c9rSVECPj5v6BZZ9Bd1xlDNEqblDqysr2AFrPcPLXF/IwMVXgOhl18v1ibGQ2LSrMT4w==
+  dependencies:
+    "@backstage/config" "^1.3.6"
+    "@backstage/errors" "^1.2.7"
+    "@backstage/frontend-plugin-api" "^0.14.0"
+    "@backstage/types" "^1.2.2"
+    "@backstage/version-bridge" "^1.0.12"
+    history "^5.0.0"
+    zod "^3.25.76"
+
 "@backstage/dev-utils@1.1.11":
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/@backstage/dev-utils/-/dev-utils-1.1.11.tgz#b5de373119c1d547ec7eaaf5807825081a1e85e5"
@@ -2050,6 +2081,17 @@
     lodash "^4.17.21"
     zod "^3.22.4"
     zod-to-json-schema "^3.21.4"
+
+"@backstage/frontend-plugin-api@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@backstage/frontend-plugin-api/-/frontend-plugin-api-0.14.0.tgz#883a40402fe2e3b3b7f5175d0fb26c98474343f1"
+  integrity sha512-xJ9R4Y/UwFQiCzz+fObgUIZPkQnjxE7825pJb4RTu3Uo7soSuSCvn3NTN3L8fXYuSNcewgVTcY4PNFOPWgTMGg==
+  dependencies:
+    "@backstage/errors" "^1.2.7"
+    "@backstage/types" "^1.2.2"
+    "@backstage/version-bridge" "^1.0.12"
+    zod "^3.25.76"
+    zod-to-json-schema "^3.25.1"
 
 "@backstage/frontend-test-utils@^0.3.0":
   version "0.3.0"
@@ -2591,6 +2633,11 @@
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@backstage/version-bridge/-/version-bridge-1.0.11.tgz#ea05424799bae78bc3e27e3b4fe88e3f8d819974"
   integrity sha512-gigfUgs6cLWAkU5EZp6C4hwSp7UsYMXf2W6EcLPn/IQAzeO77v2y+SEhWa0MBrfAgxQdEdvcztRCCkTdiXWcxQ==
+
+"@backstage/version-bridge@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@backstage/version-bridge/-/version-bridge-1.0.12.tgz#04e85e5ad1f59e9ae70eec10a03fe6c3f2aa26c0"
+  integrity sha512-n+JfiPw7KCpGSNG+v47+W2gTwBdRTTkcikLGvm29A7SG91NYDee7fhBhYTXQ1vOHJpj1yBl+2vlrNVTap33Q9g==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -19851,6 +19898,11 @@ zod@^3.22.4:
   version "3.24.2"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.2.tgz#8efa74126287c675e92f46871cfc8d15c34372b3"
   integrity sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==
+
+zod@^3.25.76:
+  version "3.25.76"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.76.tgz#26841c3f6fd22a6a2760e7ccb719179768471e34"
+  integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
 
 zwitch@^2.0.0:
   version "2.0.4"
