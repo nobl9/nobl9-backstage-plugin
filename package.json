@@ -85,7 +85,9 @@
     "flatted": "3.4.2",
     "yauzl": "3.2.1",
     "@smithy/config-resolver": "4.4.13",
-    "diff": "5.2.2"
+    "diff": "5.2.2",
+    "protobufjs": "7.5.5",
+    "follow-redirects": "1.16.0"
   },
   "prettier": "@spotify/prettier-config",
   "files": [
