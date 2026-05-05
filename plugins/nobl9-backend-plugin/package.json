@@ -57,7 +57,7 @@
     "elliptic": "6.6.1",
     "koa": "2.16.4",
     "tar-fs": "2.1.4",
-    "axios": "1.15.0",
+    "axios": "1.15.2",
     "@babel/runtime": "7.26.10",
     "prismjs": "1.30.0",
     "webpack-dev-server": "5.2.1",
