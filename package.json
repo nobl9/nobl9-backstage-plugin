@@ -86,7 +86,7 @@
     "yauzl": "3.2.1",
     "@smithy/config-resolver": "4.4.13",
     "diff": "5.2.2",
-    "protobufjs": "7.5.5",
+    "protobufjs": "7.5.6",
     "follow-redirects": "1.16.0",
     "typescript-json-schema": "0.67.0",
     "uuid": "14.0.0",
