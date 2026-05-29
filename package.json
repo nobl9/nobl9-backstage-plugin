@@ -72,9 +72,9 @@
     "sha.js": "2.4.12",
     "http-proxy-middleware": "2.0.9",
     "on-headers": "1.1.0",
-    "tmp": "0.2.4",
+    "tmp": "0.2.6",
     "mdast-util-to-hast": "13.2.1",
-    "qs": "6.14.2",
+    "qs": "6.15.2",
     "tar": "7.5.11",
     "bfj": "9.1.3",
     "fast-xml-parser": "5.7.2",
@@ -93,7 +93,8 @@
     "follow-redirects": "1.16.0",
     "typescript-json-schema": "0.67.0",
     "uuid": "14.0.0",
-    "postcss": "8.5.10"
+    "postcss": "8.5.10",
+    "js-cookie": "3.0.7"
   },
   "prettier": "@spotify/prettier-config",
   "files": [
