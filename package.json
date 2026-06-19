@@ -47,9 +47,9 @@
   },
   "resolutions": {
     "jws": "4.0.1",
-    "@backstage/core-components/js-yaml": "4.1.1",
-    "lerna/js-yaml": "4.1.1",
-    "lerna/**/js-yaml": "4.1.1",
+    "@backstage/core-components/js-yaml": "4.2.0",
+    "lerna/js-yaml": "4.2.0",
+    "lerna/**/js-yaml": "4.2.0",
     "node-forge": "1.4.0",
     "jsonpath-plus": "10.3.0",
     "elliptic": "6.6.1",
