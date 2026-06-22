@@ -70,7 +70,7 @@
     "linkifyjs": "4.3.2",
     "undici": "7.28.0",
     "sha.js": "2.4.12",
-    "http-proxy-middleware": "3.0.6",
+    "http-proxy-middleware": "3.0.7",
     "on-headers": "1.1.0",
     "tmp": "0.2.7",
     "mdast-util-to-hast": "13.2.1",
