@@ -47,16 +47,16 @@
   },
   "resolutions": {
     "jws": "4.0.1",
-    "@backstage/core-components/js-yaml": "4.2.0",
-    "lerna/js-yaml": "4.2.0",
-    "lerna/**/js-yaml": "4.2.0",
+    "@backstage/core-components/js-yaml": "4.3.0",
+    "lerna/js-yaml": "4.3.0",
+    "lerna/**/js-yaml": "4.3.0",
     "node-forge": "1.4.0",
     "jsonpath-plus": "10.3.0",
     "elliptic": "6.6.1",
     "koa": "2.16.4",
     "react-markdown": "10.0.0",
     "tar-fs": "2.1.4",
-    "axios": "1.16.0",
+    "axios": "1.18.0",
     "@babel/runtime": "7.26.10",
     "prismjs": "1.30.0",
     "webpack-dev-server": "5.2.6",
@@ -98,7 +98,11 @@
     "@babel/core": "7.29.6",
     "launch-editor": "2.14.1",
     "@grpc/grpc-js": "1.12.7",
-    "tough-cookie": "4.1.4"
+    "tough-cookie": "4.1.4",
+    "ws": "8.21.0",
+    "body-parser": "1.20.6",
+    "adm-zip": "0.6.0",
+    "sigstore": "4.1.1"
   },
   "prettier": "@spotify/prettier-config",
   "files": [
