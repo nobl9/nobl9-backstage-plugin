@@ -93,7 +93,7 @@
     "follow-redirects": "1.16.0",
     "typescript-json-schema": "0.67.0",
     "uuid": "14.0.0",
-    "postcss": "8.5.18",
+    "postcss": "8.5.23",
     "js-cookie": "3.0.7",
     "@babel/core": "7.29.6",
     "launch-editor": "2.14.1",
