@@ -101,7 +101,8 @@
     "ws": "8.21.0",
     "body-parser": "1.20.6",
     "adm-zip": "0.6.0",
-    "sigstore": "4.1.1"
+    "sigstore": "4.1.1",
+    "urllib": "4.9.1"
   },
   "prettier": "@spotify/prettier-config",
   "files": [
