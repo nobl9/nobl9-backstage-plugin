@@ -14,12 +14,19 @@ export type Composite = {
   target: number;
 };
 
+export type SloParent = {
+  name: string;
+  displayName: string;
+  labels: Record<string, string[]>;
+};
+
 export type Slo = {
   name: string;
   displayName: string;
   description: string;
   createdAt: string;
-  project: string;
+  project: SloParent;
+  service: SloParent;
   objectives: Objective[];
   labels: Record<string, string[]>;
   composite: Composite;
