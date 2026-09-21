@@ -104,7 +104,7 @@
     "tough-cookie": "4.1.4",
     "ws": "8.21.0",
     "body-parser": "1.20.6",
-    "adm-zip": "0.6.0",
+    "adm-zip": "0.6.1",
     "smol-toml": "1.8.0",
     "sigstore": "4.1.1",
     "urllib": "4.9.1"
