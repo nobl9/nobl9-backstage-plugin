@@ -17,5 +17,3 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: yarn install
     - run: yarn ci
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
