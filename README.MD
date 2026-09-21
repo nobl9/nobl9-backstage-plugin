@@ -29,6 +29,8 @@ This guide covers the installation and configuration options for the Nobl9 Backs
 - [Nobl9 API credentials](#nobl9-api-credentials)
 - [Backend plugin installation](#backend-plugin-installation)
 - [UI plugin installation](#ui-plugin-installation)
+  - [New frontend system](#new-frontend-system)
+  - [Legacy frontend system](#legacy-frontend-system)
 - [Configure the plugin](#configure-the-plugin)
   - [Global configuration](#global-configuration)
   - [Catalog entity annotations](#catalog-entity-annotations)
@@ -38,7 +40,7 @@ This guide covers the installation and configuration options for the Nobl9 Backs
 
 ### Nobl9 API credentials
 
-The Nobl9 backend plugin relies on [Nobl9 SLO Status API](https://docs.nobl9.com/api/slo). Hence, you'll need an access key to authorize requests to Nobl9 properly. Use the [official guide](https://docs.nobl9.com/Getting_Started/#access-keys) to generate `Client ID` and `Client Secret`.
+The Nobl9 backend plugin relies on [Nobl9 SLO Status API v2](https://docs.nobl9.com/api/slo-status). Hence, you'll need an access key to authorize requests to Nobl9 properly. Use the [official guide](https://docs.nobl9.com/Getting_Started/#access-keys) to generate `Client ID` and `Client Secret`.
 
 ### Backend plugin installation
 
@@ -74,6 +76,26 @@ Install the Nobl9 UI plugin package in your Backstage app by running the followi
 ```
 yarn workspace app add @nobl9/nobl9-backstage-plugin
 ```
+
+The next step depends on which [frontend system](https://backstage.io/docs/frontend-system/) your app uses. New Backstage apps use the new frontend system by default. If your app has `packages/app/src/components/catalog/EntityPage.tsx`, it uses the legacy one.
+
+#### New frontend system
+
+If `app.packages` is set to `all` in your `app-config.yaml`, no code changes are needed. The plugin is discovered automatically, and the SLOs tab appears on annotated entities.
+
+Otherwise, register the plugin in `packages/app/src/App.tsx`:
+
+```diff
+ import { createApp } from '@backstage/frontend-defaults';
++import nobl9Plugin from '@nobl9/nobl9-backstage-plugin/alpha';
+
+ export default createApp({
+-  features: [catalogPlugin],
++  features: [catalogPlugin, nobl9Plugin],
+ });
+```
+
+#### Legacy frontend system
 
 Find and edit `packages/app/src/components/catalog/EntityPage.tsx` to add the Nobl9 SLOs tab in the entity page layout.
 

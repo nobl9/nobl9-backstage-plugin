@@ -109,23 +109,24 @@ export async function createRouter(
     const services = req.query.services?.split(',') || [];
 
     const result = await getAllSlos(
-      `${nobl9Config.baseUrl}/api/v1/slos?limit=${slosPerPage}`,
+      `${nobl9Config.baseUrl}/api/v2/slos?limit=${slosPerPage}`,
       accessToken,
       nobl9Config.organization,
       [],
     );
     if (!result.ok) {
-      logger.error(result);
-      response.status(500);
+      throw new Error(
+        `SLOs couldn't be fetched, Nobl9 API responded with ${result.status}`,
+      );
     }
     const filteredData = result.data.filter(
       (slo: any) =>
-        slo.project === project &&
+        slo.project.name === project &&
         (!slos.length || slos.includes(slo.name)) &&
-        (!services.length || services.includes(slo.service)),
+        (!services.length || services.includes(slo.service.name)),
     );
 
-    response.json(groupBy(filteredData, (slo: any) => slo.service));
+    response.json(groupBy(filteredData, (slo: any) => slo.service.name));
   });
 
   const middleware = MiddlewareFactory.create({ logger, config });

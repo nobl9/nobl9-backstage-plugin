@@ -88,7 +88,7 @@ export const SloGridItem = ({
               variant="text"
               color="primary"
               target="_blank"
-              href={`${detailsBaseUrl}/slo/details?org=${organization}&name=${slo.name}&project=${slo.project}&opt=currentTimeWindow&autorefresh=true`}
+              href={`${detailsBaseUrl}/slo/details?org=${organization}&name=${slo.name}&project=${slo.project.name}&opt=currentTimeWindow&autorefresh=true`}
               endIcon={<OpenInNewIcon />}
             >
               Check SLO Details in N9

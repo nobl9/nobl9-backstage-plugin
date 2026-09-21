@@ -5,6 +5,7 @@ import { Grid, Typography } from '@material-ui/core';
 import { Progress, ResponseErrorPanel } from '@backstage/core-components';
 import { Entity } from '@backstage/catalog-model';
 import { Config } from '@backstage/config';
+import { ResponseError } from '@backstage/errors';
 import {
   useApi,
   configApiRef,
@@ -67,7 +68,7 @@ const getBackendUrl = (config: Config, entity: Entity) => {
   const baseUrl = config.getString('backend.baseUrl');
   const path = config.has('nobl9.backendPluginPath')
     ? config.getString('nobl9.backendPluginPath')
-    : '/api/nobl9/slos';
+    : '/api/nobl9-backend/slos';
   return `${baseUrl}${path}?${toQueryStringParams(entity)}`;
 };
 
@@ -83,6 +84,9 @@ export const SloPage = () => {
       const response = await fetch(getBackendUrl(config, entity), {
         headers: { Authorization: `Bearer ${credentials.token}` },
       });
+      if (!response.ok) {
+        throw await ResponseError.fromResponse(response);
+      }
       return response.json();
     }, [entity]);
 
