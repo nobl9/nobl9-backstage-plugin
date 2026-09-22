@@ -234,3 +234,10 @@ spec:
 yarn remove --cwd packages/app @nobl9/nobl9-backstage-plugin
 yarn remove --cwd packages/app @nobl9/nobl9-backstage-backend-plugin
 ```
+
+## Releasing
+
+Releases are made from `main` in two steps:
+
+1. Run the `prepare-release` workflow. It bumps the version based on the commits since the last release, updates the changelogs and opens a pull request. Review and merge it.
+2. Run the `release` workflow. It creates the git tag and GitHub release for the merged version and publishes both packages to npm.

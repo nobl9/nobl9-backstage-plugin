@@ -15,9 +15,7 @@
     "clean": "backstage-cli repo clean",
     "tsc": "tsc",
     "ci": "tsc && backstage-cli repo build --all && backstage-cli repo test --watchAll=false && backstage-cli repo lint && prettier --check .",
-    "version:minor": "npx lerna version minor",
-    "version:major": "npx lerna version major",
-    "version:patch": "npx lerna version patch"
+    "release:prepare": "lerna version --yes --force-publish --conventional-commits --conventional-graduate --no-git-tag-version --no-push"
   },
   "dependencies": {
     "@backstage/core-components": "0.18.14",
