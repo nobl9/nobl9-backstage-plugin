@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nobl9/nobl9-backstage-plugin/compare/v0.3.1...v0.4.0) (2026-09-22)
+
+
+### Features
+
+* migrate to SLO Status API v2 and support Backstage 1.55 ([2f14aba](https://github.com/nobl9/nobl9-backstage-plugin/commit/2f14aba37b9c7456cd57d9130b64697e36d3d77e))
+
+
+
+
+
 ## [0.3.1](https://github.com/nobl9/nobl9-backstage-plugin/compare/v0.3.0...v0.3.1) (2025-02-21)
 
 **Note:** Version bump only for package @nobl9/nobl9-backstage-plugin
