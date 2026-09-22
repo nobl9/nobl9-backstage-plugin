@@ -29,7 +29,8 @@ jobs:
           git config --global user.name "n9-machine-user"
           git config --global user.email "n9-machine-user@users.noreply.github.com"
           git checkout -b "release/v${version}"
-          git add -A
+          # Only the files lerna changed. yarn install may touch yarn.lock; that is not part of a release.
+          git add lerna.json CHANGELOG.md 'plugins/*/package.json' 'plugins/*/CHANGELOG.md'
           git commit -m "chore: release v${version}"
           git push -u origin "release/v${version}"
           gh pr create \
