@@ -12722,10 +12722,10 @@ iovalkey@^0.3.3:
     redis-parser "^3.0.0"
     standard-as-callback "^2.1.0"
 
-ip-address@10.5.0, ip-address@^10.2.0, ip-address@^9.0.5:
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.5.0.tgz#fcd6d7dfe9e68416b7cb71afe9bc960b3e38c13b"
-  integrity sha512-R5SnVLJmgYYvf2F2ZgwSBnelz5G4q5AxIC277GDfUaNbrZKNANcBC7RHqYYePlszf4kBolVkJauG0ZjHHFh55g==
+ip-address@10.5.1, ip-address@^10.2.0, ip-address@^9.0.5:
+  version "10.5.1"
+  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.5.1.tgz#6a4793078537de6c82e61d6eadb2914813d23b00"
+  integrity sha512-EXujUp9jyOI/chPgtqk6uy7fDq8AeCB/WlfEuPg9LN0fN9lzKAKfuDYi60SMhHwgUiEhZvVYsbGZN+RUU1INiA==
 
 ipaddr.js@1.9.1:
   version "1.9.1"
