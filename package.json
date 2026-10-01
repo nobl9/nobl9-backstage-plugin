@@ -98,7 +98,7 @@
     "js-cookie": "3.0.7",
     "@babel/core": "7.29.6",
     "launch-editor": "2.14.1",
-    "@grpc/grpc-js": "1.12.7",
+    "@grpc/grpc-js": "1.13.6",
     "tough-cookie": "4.1.4",
     "ws": "8.21.0",
     "body-parser": "1.20.6",
