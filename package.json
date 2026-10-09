@@ -55,6 +55,7 @@
     "lerna/js-yaml": "4.3.2",
     "lerna/**/js-yaml": "4.3.2",
     "lerna/nx/brace-expansion": "5.0.12",
+    "postcss-selector-parser": "7.1.6",
     "node-forge": "1.4.0",
     "jsonpath-plus": "10.3.0",
     "elliptic": "6.6.1",
@@ -103,7 +104,7 @@
     "ws": "8.21.0",
     "body-parser": "1.20.6",
     "adm-zip": "0.6.1",
-    "smol-toml": "1.8.0",
+    "smol-toml": "1.9.0",
     "sigstore": "4.1.1",
     "urllib": "4.9.1"
   },
